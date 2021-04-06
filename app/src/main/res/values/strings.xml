@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project4_1</string>
+    <string name="title">사칙연산 계산기</string>
+    <string name="hint1">숫자1</string>
+    <string name="hint2">숫자2</string>
+    <string name="btn1">더하기</string>
+    <string name="btn2">빼기</string>
+    <string name="btn3">곱하기</string>
+    <string name="btn4">나누기</string>
+    <string name="t1">계산 결과 : </string>
+</resources>
