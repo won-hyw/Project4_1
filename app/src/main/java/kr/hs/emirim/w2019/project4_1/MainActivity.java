@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnMinus = findViewById(R.id.btn2);
         Button btnMulti = findViewById(R.id.btn3);
         Button btnDiv = findViewById(R.id.btn4);
+        Button btnMod = findViewById(R.id.btn5);
         edit1 = findViewById(R.id.edit1);
         edit2 = findViewById(R.id.edit2);
         textResult = findViewById(R.id.t1);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnMinus.setOnClickListener(btnListener);
         btnMulti.setOnClickListener(btnListener);
         btnDiv.setOnClickListener(btnListener);
+        btnMod.setOnClickListener(btnListener);
     }
 
     View.OnClickListener btnListener = new View.OnClickListener() {
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn4:
                     result = num1 / num2;
+                    break;
+                case R.id.btn5:
+                    result = num1 % num2;
                     break;
             }
             textResult.setText(R.string.t1);
