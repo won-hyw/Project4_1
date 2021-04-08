@@ -2,11 +2,13 @@ package kr.hs.emirim.w2019.project4_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText edit1, edit2;
@@ -38,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             String strEdit1 = edit1.getText().toString();
             String strEdit2 = edit2.getText().toString();
+            Log.v("***strEdit1", strEdit1);
+            if(strEdit1.equals("") || strEdit2.equals("")){
+                Toast.makeText(getApplicationContext(), "계산에 필요한 값을 입력하지 않았습니다.", Toast.LENGTH_SHORT).show();
+                return;
+            }
             int num1 = Integer.parseInt(strEdit1);
             int num2 = Integer.parseInt(strEdit2);
             int result = 0;
